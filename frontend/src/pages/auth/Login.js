@@ -30,11 +30,11 @@ const Login = () => {
     e.preventDefault();
 
     if (!email || !password) {
-      return toast.error("All fields are required");
+      return toast.error("Barcha maydonlar talab qilinadi");
     }
 
     if (!validateEmail(email)) {
-      return toast.error("Please enter a valid email");
+      return toast.error("Yaroqli elektron pochta manzilini kiriting");
     }
 
     const userData = {
@@ -85,12 +85,12 @@ const Login = () => {
               Login
             </button>
           </form>
-          <Link to="/forgot">Forgot Password</Link>
+          <Link to="/forgot">Parolni unutdingizmi?</Link>
 
           <span className={styles.register}>
-            <Link to="/">Home</Link>
-            <p> &nbsp; Don't have an account? &nbsp;</p>
-            <Link to="/register">Register</Link>
+            <Link to="/">Bosh sahifa</Link>
+            <p> &nbsp; Hisobingiz yo'qmi? &nbsp;</p>
+            <Link to="/register">Roʻyxatdan oʻtish</Link>
           </span>
         </div>
       </Card>

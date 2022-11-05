@@ -40,15 +40,15 @@ const ProductList = ({ products, isLoading }) => {
 
   const confirmDelete = (id) => {
     confirmAlert({
-      title: "Delete Product",
-      message: "Are you sure you want to delete this product.",
+      title: "Mahsulotni o'chirish",
+      message: "Haqiqatan ham ushbu mahsulotni oʻchirib tashlamoqchimisiz.",
       buttons: [
         {
-          label: "Delete",
+          label: "Oʻchirish",
           onClick: () => delProduct(id),
         },
         {
-          label: "Cancel",
+          label: "Bekor qilish",
           // onClick: () => alert('Click No')
         },
       ],
@@ -84,7 +84,7 @@ const ProductList = ({ products, isLoading }) => {
       <div className="table">
         <div className="--flex-between --flex-dir-column">
           <span>
-            <h3>Inventory Items</h3>
+            <h3>Maxsulotlar</h3>
           </span>
           <span>
             <Search
@@ -98,18 +98,18 @@ const ProductList = ({ products, isLoading }) => {
 
         <div className="table">
           {!isLoading && products.length === 0 ? (
-            <p>-- No product found, please add a product...</p>
+            <p>-- Mahsulot topilmadi, iltimos mahsulot qo'shing...</p>
           ) : (
             <table>
               <thead>
                 <tr>
                   <th>s/n</th>
-                  <th>Name</th>
-                  <th>Category</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                  <th>Value</th>
-                  <th>Action</th>
+                  <th>Nomi</th>
+                  <th>Toifasi</th>
+                  <th>Narxi</th>
+                  <th>Miqdori</th>
+                  <th>Qiymati</th>
+                  <th>Harakat</th>
                 </tr>
               </thead>
 
@@ -122,13 +122,13 @@ const ProductList = ({ products, isLoading }) => {
                       <td>{shortenText(name, 16)}</td>
                       <td>{category}</td>
                       <td>
-                        {"$"}
                         {price}
+                        {"so'm"}
                       </td>
                       <td>{quantity}</td>
                       <td>
-                        {"$"}
                         {price * quantity}
+                        {"so'm"}
                       </td>
                       <td className="icons">
                         <span>

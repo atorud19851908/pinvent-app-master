@@ -26,10 +26,10 @@ const Reset = () => {
     e.preventDefault();
 
     if (password.length < 6) {
-      return toast.error("Passwords must be up to 6 characters");
+      return toast.error("Parollar 6 ta belgidan oshmasligi kerak");
     }
     if (password !== password2) {
-      return toast.error("Passwords do not match");
+      return toast.error("Parollar mos kelmadi");
     }
 
     const userData = {
@@ -52,12 +52,12 @@ const Reset = () => {
           <div className="--flex-center">
             <MdPassword size={35} color="#999" />
           </div>
-          <h2>Reset Password</h2>
+          <h2>Parolni tiklash</h2>
 
           <form onSubmit={reset}>
             <input
               type="password"
-              placeholder="New Password"
+              placeholder="Yangi Parol"
               required
               name="password"
               value={password}
@@ -65,7 +65,7 @@ const Reset = () => {
             />
             <input
               type="password"
-              placeholder="Confirm New Password"
+              placeholder="Yangi parolni tasdiqlang"
               required
               name="password2"
               value={password2}
@@ -73,11 +73,11 @@ const Reset = () => {
             />
 
             <button type="submit" className="--btn --btn-primary --btn-block">
-              Reset Password
+              Parolni tiklash
             </button>
             <div className={styles.links}>
               <p>
-                <Link to="/">- Home</Link>
+                <Link to="/">- Bosh sahifa</Link>
               </p>
               <p>
                 <Link to="/login">- Login</Link>

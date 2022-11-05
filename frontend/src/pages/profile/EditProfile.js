@@ -75,7 +75,7 @@ const EditProfile = () => {
 
         const data = await updateUser(formData);
         console.log(data);
-        toast.success("User updated");
+        toast.success("Foydalanuvchi yangilandi");
         navigate("/profile");
         setIsLoading(false);
       }

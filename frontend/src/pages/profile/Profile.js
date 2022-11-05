@@ -35,7 +35,7 @@ const Profile = () => {
       {isLoading && <SpinnerImg />}
       <>
         {!isLoading && profile === null ? (
-          <p>Something went wrong, please reload the page...</p>
+          <p>Nimadir xato ketdi, sahifani qayta yuklang...</p>
         ) : (
           <Card cardClass={"card --flex-dir-column"}>
             <span className="profile-photo">
@@ -43,20 +43,22 @@ const Profile = () => {
             </span>
             <span className="profile-data">
               <p>
-                <b>Name : </b> {profile?.name}
+                <b>Nomi : </b> {profile?.name}
               </p>
               <p>
                 <b>Email : </b> {profile?.email}
               </p>
               <p>
-                <b>Phone : </b> {profile?.phone}
+                <b>Tel : </b> {profile?.phone}
               </p>
               <p>
-                <b>Bio : </b> {profile?.bio}
+                <b>Tarjimayi hol : </b> {profile?.bio}
               </p>
               <div>
                 <Link to="/edit-profile">
-                  <button className="--btn --btn-primary">Edit Profile</button>
+                  <button className="--btn --btn-primary">
+                    Profilni tahrirlash
+                  </button>
                 </Link>
               </div>
             </span>

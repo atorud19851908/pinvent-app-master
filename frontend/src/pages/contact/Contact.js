@@ -22,7 +22,6 @@ const Contact = () => {
       setSubject("");
       setMessage("");
       toast.success(response.data.message);
-      console.log(response.data.message);
     } catch (error) {
       toast.error(error.message);
     }
@@ -30,20 +29,20 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h3 className="--mt">Contact Us</h3>
+      <h3 className="--mt">Biz bilan bog'lanish</h3>
       <div className="section">
         <form onSubmit={sendEmail}>
           <Card cardClass="card">
-            <label>Subject</label>
+            <label>Mavzu</label>
             <input
               type="text"
               name="subject"
-              placeholder="Subject"
+              placeholder="Mavzu"
               required
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
             />
-            <label>Message</label>
+            <label>Xabar</label>
             <textarea
               cols="30"
               rows="10"
@@ -52,31 +51,34 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <button className="--btn --btn-primary">Send Message</button>
+            <button className="--btn --btn-primary">Xabar yuborish</button>
           </Card>
         </form>
 
         <div className="details">
           <Card cardClass={"card2"}>
-            <h3>Our Contact Information</h3>
-            <p>Fill the form or contact us via other channels listed below</p>
+            <h3>Bizning aloqa ma'lumotlarimiz</h3>
+            <p>
+              Formani to'ldiring yoki quyida keltirilgan boshqa kanallar orqali
+              biz bilan bog'laning
+            </p>
 
             <div className="icons">
               <span>
                 <FaPhoneAlt />
-                <p>070123123123</p>
+                <p>+998972965522</p>
               </span>
               <span>
                 <FaEnvelope />
-                <p>Support@invent.com</p>
+                <p>maksibrain@mail.ru</p>
               </span>
               <span>
                 <GoLocation />
-                <p>Abuja, Nigeria</p>
+                <p>Uzbekiston, Buxoro</p>
               </span>
               <span>
                 <FaTwitter />
-                <p>@ZinoTrust</p>
+                <p>@maks</p>
               </span>
             </div>
           </Card>

@@ -20,7 +20,7 @@ const ProductForm = ({
       <Card cardClass={"card"}>
         <form onSubmit={saveProduct}>
           <Card cardClass={"group"}>
-            <label>Product Image</label>
+            <label>Mahsulot rasmi</label>
             <code className="--color-dark">
               Supported Formats: jpg, jpeg, png
             </code>
@@ -35,19 +35,19 @@ const ProductForm = ({
                 <img src={imagePreview} alt="product" />
               </div>
             ) : (
-              <p>No image set for this poduct.</p>
+              <p>Ushbu mahsulot uchun rasm oʻrnatilmagan.</p>
             )}
           </Card>
-          <label>Product Name:</label>
+          <label>Maxsulot Nomi:</label>
           <input
             type="text"
-            placeholder="Product name"
+            placeholder="Maxsulot nomi"
             name="name"
             value={product?.name}
             onChange={handleInputChange}
           />
 
-          <label>Product Category:</label>
+          <label>Mahsulot toifasi:</label>
           <input
             type="text"
             placeholder="Product Category"
@@ -56,7 +56,7 @@ const ProductForm = ({
             onChange={handleInputChange}
           />
 
-          <label>Product Price:</label>
+          <label>Maxsulot narxi:</label>
           <input
             type="text"
             placeholder="Product Price"
@@ -65,7 +65,7 @@ const ProductForm = ({
             onChange={handleInputChange}
           />
 
-          <label>Product Quantity:</label>
+          <label>Mahsulot miqdori:</label>
           <input
             type="text"
             placeholder="Product Quantity"
@@ -74,7 +74,7 @@ const ProductForm = ({
             onChange={handleInputChange}
           />
 
-          <label>Product Description:</label>
+          <label>Mahsulot haqida:</label>
           <ReactQuill
             theme="snow"
             value={description}
@@ -85,7 +85,7 @@ const ProductForm = ({
 
           <div className="--my">
             <button type="submit" className="--btn --btn-primary">
-              Save Product
+            Mahsulotni saqlash
             </button>
           </div>
         </form>

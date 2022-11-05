@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-
+console.log(BACKEND_URL);
 export const validateEmail = (email) => {
   return email.match(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -18,7 +18,7 @@ export const registerUser = async (userData) => {
       { withCredentials: true }
     );
     if (response.statusText === "OK") {
-      toast.success("User Registered successfully");
+      toast.success("Foydalanuvchi muvaffaqiyatli ro'yxatdan o'tdi");
     }
     return response.data;
   } catch (error) {
@@ -38,7 +38,7 @@ export const loginUser = async (userData) => {
       userData
     );
     if (response.statusText === "OK") {
-      toast.success("Login Successful...");
+      toast.success("Kirish muvaffaqiyatli...");
     }
     return response.data;
   } catch (error) {

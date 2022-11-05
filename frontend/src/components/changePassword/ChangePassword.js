@@ -25,7 +25,7 @@ const ChangePassword = () => {
     e.preventDefault();
 
     if (password !== password2) {
-      return toast.error("New passwords do not match");
+      return toast.error("Yangi parol mos kelmadi");
     }
 
     const formData = {
@@ -41,7 +41,7 @@ const ChangePassword = () => {
   return (
     <div className="change-password">
       <Card cardClass={"password-card"}>
-        <h3>Change Password</h3>
+        <h3>Parolni o'zgartirish</h3>
         <form onSubmit={changePass} className="--form-control">
           <input
             type="password"
@@ -53,7 +53,7 @@ const ChangePassword = () => {
           />
           <input
             type="password"
-            placeholder="New Password"
+            placeholder="Yangi Parol"
             required
             name="password"
             value={password}
@@ -61,14 +61,14 @@ const ChangePassword = () => {
           />
           <input
             type="password"
-            placeholder="Confirm New Password"
+            placeholder="Yangi Parolni tasdiqlang"
             required
             name="password2"
             value={password2}
             onChange={handleInputChange}
           />
           <button type="submit" className="--btn --btn-primary">
-            Change Password
+            Parolni o'zgartirish
           </button>
         </form>
       </Card>

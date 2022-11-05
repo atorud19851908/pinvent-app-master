@@ -35,6 +35,7 @@ const AddProduct = () => {
   const handleImageChange = (e) => {
     setProductImage(e.target.files[0]);
     setImagePreview(URL.createObjectURL(e.target.files[0]));
+    console.log(e.target.files);
   };
 
   const generateKSKU = (category) => {
@@ -65,7 +66,7 @@ const AddProduct = () => {
   return (
     <div>
       {isLoading && <Loader />}
-      <h3 className="--mt">Add New Product</h3>
+      <h3 className="--mt">Yangi mahsulot qo'shish</h3>
       <ProductForm
         product={product}
         productImage={productImage}

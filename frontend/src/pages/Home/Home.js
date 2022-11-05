@@ -16,7 +16,7 @@ const Home = () => {
         <ul className="home-links">
           <ShowOnLogout>
             <li>
-              <Link to="/register">Register</Link>
+              <Link to="/register">Roʻyxatdan oʻtish</Link>
             </li>
           </ShowOnLogout>
           <ShowOnLogout>
@@ -29,7 +29,7 @@ const Home = () => {
           <ShowOnLogin>
             <li>
               <button className="--btn --btn-primary">
-                <Link to="/dashboard">Dashboard</Link>
+                <Link to="/dashboard">Boshqaruv paneli</Link>
               </button>
             </li>
           </ShowOnLogin>
@@ -38,20 +38,21 @@ const Home = () => {
       {/* HERO SECTION */}
       <section className="container hero">
         <div className="hero-text">
-          <h2>Inventory {"&"} Stock Management Solution</h2>
+          <h2>Maxsulotlar majmuyi {"&"} Ombor boshqaruvi tizimi</h2>
           <p>
-            Inventory system to control and manage proucts in the warehouse in
-            real timeand integrated to make it easier to develop your business.
+            Ombordagi mahsulotlarni nazorat qilish va boshqarish uchun
+            inventarizatsiya tizimi real vaqtda va biznesingizni
+            rivojlantirishni osonlashtirish uchun birlashtirilgan.
           </p>
           <div className="hero-buttons">
             <button className="--btn --btn-secondary">
-              <Link to="/dashboard">Free Trial 1 Month</Link>
+              <Link to="/dashboard">Bepul sinov muddati 10 kun</Link>
             </button>
           </div>
           <div className="--flex-start">
-            <NumberText num="14K" text="Brand Owners" />
-            <NumberText num="23K" text="Active Users" />
-            <NumberText num="500+" text="Partners" />
+            <NumberText num="14K" text="Brend egasi" />
+            <NumberText num="23K" text="Faol foydalanuvchilar" />
+            <NumberText num="500+" text="Hamkorlar" />
           </div>
         </div>
 

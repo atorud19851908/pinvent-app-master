@@ -1,35 +1,49 @@
 import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import { BiImageAdd } from "react-icons/bi";
-
+import { BsPersonCircle } from "react-icons/bs";
 const menu = [
   {
-    title: "Dashboard",
+    title: "Boshqaruv paneli",
     icon: <FaTh />,
     path: "/dashboard",
   },
   {
-    title: "Add Product",
+    title: "Mahsulot qo'shish",
     icon: <BiImageAdd />,
     path: "/add-product",
   },
   {
-    title: "Account",
+    title: "Hisobingiz",
     icon: <FaRegChartBar />,
     childrens: [
       {
-        title: "Profile",
+        title: "Profil",
         path: "/profile",
       },
       {
-        title: "Edit Profile",
+        title: "Profilni tahrirlash",
         path: "/edit-profile",
       },
     ],
   },
   {
-    title: "Report Bug",
+    title: "Xato haqida xabar berish",
     icon: <FaCommentAlt />,
     path: "/contact-us",
+  },
+  {
+    title: "AGENTS",
+    icon: <BsPersonCircle />,
+    childrens: [
+      {
+        title: "AGENT1",
+        path: "/agents/:id",
+      },
+      {
+        title: "AGENT2",
+        path: "/agents/:id",
+      },
+    ],
   },
 ];
 

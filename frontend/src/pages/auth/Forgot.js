@@ -12,11 +12,11 @@ const Forgot = () => {
   const forgot = async (e) => {
     e.preventDefault();
     if (!email) {
-      return toast.error("Please enter an email");
+      return toast.error("Iltimos, elektron pochta manzilini kiriting");
     }
 
     if (!validateEmail(email)) {
-      return toast.error("Please enter a valid email");
+      return toast.error("Yaroqli elektron pochta manzilini kiriting");
     }
 
     const userData = {
@@ -34,7 +34,7 @@ const Forgot = () => {
           <div className="--flex-center">
             <AiOutlineMail size={35} color="#999" />
           </div>
-          <h2>Forgot Password</h2>
+          <h2>Parolni unutdingizmi?</h2>
 
           <form onSubmit={forgot}>
             <input
@@ -47,11 +47,11 @@ const Forgot = () => {
             />
 
             <button type="submit" className="--btn --btn-primary --btn-block">
-              Get Reset Email
+              Elektron pochtani qayta tiklash
             </button>
             <div className={styles.links}>
               <p>
-                <Link to="/">- Home</Link>
+                <Link to="/">- Bosh sahifa</Link>
               </p>
               <p>
                 <Link to="/login">- Login</Link>

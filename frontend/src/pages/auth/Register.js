@@ -32,16 +32,16 @@ const Register = () => {
     e.preventDefault();
 
     if (!name || !email || !password) {
-      return toast.error("All fields are required");
+      return toast.error("Barcha maydonlar talab qilinadi");
     }
     if (password.length < 6) {
-      return toast.error("Passwords must be up to 6 characters");
+      return toast.error("Parollar 6 ta belgidan oshmasligi kerak");
     }
     if (!validateEmail(email)) {
-      return toast.error("Please enter a valid email");
+      return toast.error("Yaroqli elektron pochta manzilini kiriting");
     }
     if (password !== password2) {
-      return toast.error("Passwords do not match");
+      return toast.error("Parollar mos kelmadi");
     }
 
     const userData = {
@@ -70,7 +70,7 @@ const Register = () => {
           <div className="--flex-center">
             <TiUserAddOutline size={35} color="#999" />
           </div>
-          <h2>Register</h2>
+          <h2>Roʻyxatdan oʻtish</h2>
 
           <form onSubmit={register}>
             <input
@@ -91,7 +91,7 @@ const Register = () => {
             />
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Parol"
               required
               name="password"
               value={password}
@@ -99,20 +99,20 @@ const Register = () => {
             />
             <input
               type="password"
-              placeholder="Confirm Password"
+              placeholder="Parolni tasdiqlang"
               required
               name="password2"
               value={password2}
               onChange={handleInputChange}
             />
             <button type="submit" className="--btn --btn-primary --btn-block">
-              Register
+              Roʻyxatdan oʻtish
             </button>
           </form>
 
           <span className={styles.register}>
-            <Link to="/">Home</Link>
-            <p> &nbsp; Already have an account? &nbsp;</p>
+            <Link to="/">Bosh sahifa</Link>
+            <p> &nbsp; Hisobingiz bormi? &nbsp;</p>
             <Link to="/login">Login</Link>
           </span>
         </div>
